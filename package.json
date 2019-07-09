@@ -1,0 +1,25 @@
+{
+  "name": "React-SocialNetwork-Graphql-Express-Backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaniaLs4Life/React-SocialNetwork-Graphql-Express-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SaniaLs4Life/React-SocialNetwork-Graphql-Express-Backend/issues"
+  },
+  "homepage": "https://github.com/SaniaLs4Life/React-SocialNetwork-Graphql-Express-Backend#readme",
+  "dependencies": {
+    "apollo-server": "^2.6.7",
+    "graphql": "^14.4.2",
+    "mongoose": "^5.6.4"
+  }
+}
