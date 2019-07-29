@@ -6,19 +6,18 @@ import { Link } from "react-router-dom";
 function PostCard({
   post: { body, createdAt, id, username, likeCount, commentCount, likes }
 }) {
-
   const likePost = () => {
-      console.log('Post liked!');
-  }
-  
+    console.log("Post liked!");
+  };
+
   const commentOnPost = () => {
-      console.log('Commented on a post!');
-  }
+    console.log("Commented on a post!");
+  };
   return (
     <Card fluid>
       <Card.Content>
         <Image
-          floated="right"
+          floated="left"
           size="mini"
           src="https://www.pinclipart.com/picdir/middle/355-3553881_stockvader-predicted-adig-user-profile-icon-png-clipart.png"
         />

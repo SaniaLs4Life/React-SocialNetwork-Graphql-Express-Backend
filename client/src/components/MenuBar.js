@@ -26,11 +26,11 @@ const MenuBar = () => {
           to="/login"
         />
         <Menu.Item
-          name="logout"
-          active={activeItem === "logout"}
+          name="register"
+          active={activeItem === "register"}
           onClick={handleItemClick}
           as={Link}
-          to="/logout"
+          to="/register"
         />
       </Menu.Menu>
     </Menu>
