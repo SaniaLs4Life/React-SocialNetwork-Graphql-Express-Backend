@@ -14,9 +14,7 @@ function Home() {
     loading,
     data: { getPosts: posts }
   } = useQuery(FETCH_POSTS_QUERY);
-  if (posts) {
-    console.log(posts);
-  }
+
   return (
     <Grid columns={3} divided>
       <Grid.Row className="page-title">

@@ -9,7 +9,7 @@ function PostCard({
   post: { body, createdAt, id, username, likeCount, commentCount, likes }
 }) {
   const { user } = useContext(AuthContext);
-  
+
   return (
     <Card fluid>
       <Card.Content>
@@ -20,16 +20,24 @@ function PostCard({
         />
         <Card.Header>{username}</Card.Header>
         <Card.Meta as={Link} to={`/posts/${id}`}>
-          {moment(createdAt).fromNow(true)}
+          {moment(createdAt).fromNow()}
         </Card.Meta>
         <Card.Description>{body}</Card.Description>
       </Card.Content>
       <Card.Content extra>
         {/* {likes.map(e => <p>{e.username}</p>)} */}
         <LikeButton user={user} post={{ id, likeCount, likes }} />
-        <Label style={{ cursor: "pointer" }} as={Link} to={`/posts/${id}`}>
+        {/* <Label style={{ cursor: "pointer" }} as={Link} to={`/posts/${id}`}>
           <Icon color="blue" name="comments outline" /> <b>{commentCount}</b>
-        </Label>
+        </Label> */}
+        <Button as={Link} labelPosition="right" to={`/posts/${id}`}>
+          <Button color="teal" basic>
+            <Icon name="comments" />
+          </Button>
+          <Label basic color="teal" pointing="left">
+            {commentCount}
+          </Label>
+        </Button>
         {user && user.username === username && (
           <Button
             as="div"

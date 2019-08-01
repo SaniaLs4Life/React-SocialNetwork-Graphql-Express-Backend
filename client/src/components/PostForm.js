@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Button, Icon } from "semantic-ui-react";
+import { Form, Button, Icon, Popup } from "semantic-ui-react";
 
 import { useForm } from "../utils/hooks";
 import { useMutation } from "@apollo/react-hooks";
@@ -29,20 +29,25 @@ export default function PostForm() {
   return (
     <Form onSubmit={onSubmit}>
       <h2>Create a post</h2>
-      <Form.Input
-        iconPosition="left"
-        icon="sticky note"
-        placeholder="Write your post"
-        name="body"
-        onChange={onChange}
-        error={error ? error.graphQLErrors[0].message : null}
-        value={values.body}
-        action={
-          <Button type="submit" color="red">
-            <Icon name="add" />
-            Post
-          </Button>
-        }
+      <Popup
+        trigger={<Form.Input
+          iconPosition="left"
+          icon="sticky note"
+          placeholder="Write your post"
+          name="body"
+          onChange={onChange}
+          error={error ? error.graphQLErrors[0].message : null}
+          value={values.body}
+          action={
+            <Button type="submit" color="red">
+              <Icon name="add" />
+              Post
+            </Button>
+          }
+        />}
+        header='New Post'
+        content='What is on your mind?'
+        on='focus'
       />
     </Form>
   );
