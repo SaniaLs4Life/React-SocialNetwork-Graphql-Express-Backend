@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/SaniaLs4Life/React-SocialNetwork-Graphql-Express-Backend#readme",
   "dependencies": {
-    "apollo-server": "^2.6.7",
+    "apollo-server": "^2.14.2",
     "bcryptjs": "^2.4.3",
     "graphql": "^14.4.2",
     "jsonwebtoken": "^8.5.1",
